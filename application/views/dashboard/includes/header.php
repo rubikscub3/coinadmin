@@ -139,7 +139,69 @@
                         
  						 <li class="<?php echo $beneficiary;?>">
                             <a href="javascript:void(0)"><i class="clip-users-3"></i>
-                                <span class="title"> Beneficiary </span><i class="icon-arrow"></i>
+                                <span class="title"> Users </span><i class="icon-arrow"></i>
+                                <span class="selected"></span>
+                            </a>
+                            <ul class="sub-menu">
+								<li class="<?php echo $beneficiary_add;?>">
+                                    <a href="<?php echo base_url()?>Beneficiary">
+                                        <span class="title"> User Approval </span>
+                                    </a>
+                                </li>
+                                <li class="<?php echo $beneficiary_add;?>">
+                                    <a href="<?php echo base_url()?>Beneficiary">
+                                        <span class="title"> Accept </span>
+                                    </a>
+                                </li>
+                                <li class="<?php echo $beneficiary_list;?>">
+                                    <a href="<?php echo base_url()?>Beneficiary/beneficiary_list">
+                                        <span class="title"> Decline </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+						
+						<li class="<?php echo $beneficiary;?>">
+                            <a href="javascript:void(0)"><i class="clip-users-3"></i>
+                                <span class="title"> Coins </span><i class="icon-arrow"></i>
+                                <span class="selected"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="<?php echo $beneficiary_add;?>">
+                                    <a href="<?php echo base_url()?>Beneficiary">
+                                        <span class="title"> Coins Request</span>
+                                    </a>
+                                </li>
+                                <li class="<?php echo $beneficiary_list;?>">
+                                    <a href="<?php echo base_url()?>Beneficiary/beneficiary_list">
+                                        <span class="title">Accept</span>
+                                    </a>
+                                </li>
+								<li class="<?php echo $beneficiary_list;?>">
+                                    <a href="<?php echo base_url()?>Beneficiary/beneficiary_list">
+                                        <span class="title">Reject</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+						
+						<li class="<?php echo $beneficiary;?>">
+                            <a href="javascript:void(0)"><i class="clip-users-3"></i>
+                                <span class="title"> User Reports </span><i class="icon-arrow"></i>
+                                <span class="selected"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="<?php echo $beneficiary_add;?>">
+                                    <a href="<?php echo base_url()?>Beneficiary">
+                                        <span class="title"> Users</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+						
+						<li class="<?php echo $beneficiary;?>">
+                            <a href="javascript:void(0)"><i class="clip-users-3"></i>
+                                <span class="title"> System Settings </span><i class="icon-arrow"></i>
                                 <span class="selected"></span>
                             </a>
                             <ul class="sub-menu">
@@ -148,54 +210,8 @@
                                         <span class="title"> Add Beneficiary </span>
                                     </a>
                                 </li>
-                                <li class="<?php echo $beneficiary_list;?>">
-                                    <a href="<?php echo base_url()?>Beneficiary/beneficiary_list">
-                                        <span class="title"> Beneficiary List </span>
-                                    </a>
-                                </li>
                             </ul>
                         </li>
-
-                        <li class="<?php echo $tax_payment;?>">
-                            <a href="javascript:void(0)"><i class="fa fa-money"></i>
-                                <span class="title"> Tax Payment </span><i class="icon-arrow"></i>
-                                <span class="selected"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li class="<?php echo $tax_banking;?>">
-                                    <a href="<?php echo base_url()?>Tax">
-                                        <span class="title"> Payment Via Banking Channel </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li> 
-                        
-                      <li class="<?php echo $history;?>"> <a href="<?php echo base_url()?>History"><i class="clip-history"></i>  <span class="title"> Tax Payment History </span><span class="<?php echo $history_select;?>"></span> </a> </li>
-						
-						<li class="<?php echo $profile;?>">
-                            <a href="javascript:void(0)"><i class="clip-users-3"></i>
-                                <span class="title"> Profile Management </span><i class="icon-arrow"></i>
-                                <span class="selected"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li class="<?php echo $view_profile;?>">
-                                    <a href="<?php echo base_url()?>Dashboard/view_profile">
-                                        <span class="title"> View Profile </span>
-                                    </a>
-                                </li>
-                                <li class="<?php echo $edit_profile;?>">
-                                    <a href="<?php echo base_url()?>Dashboard/profile">
-                                        <span class="title"> Edit Profile </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <!-- <li class="<?php echo $profile;?>"> <a href="<?php echo base_url()?>Dashboard/profile"><i class="clip-user"></i>  <span class="title"> Profile Management </span><span class="<?php echo $profile_select;?>"></span> </a> </li>-->
-
-                        <li class="<?php echo $about;?>"> <a href="<?php echo base_url()?>About"><i class="clip-info-2"></i>  <span class="title"> About Us </span><span class="<?php echo $about_select;?>"></span> </a> </li>
-
-                        <li class="<?php echo $faq;?>"> <a href="<?php echo base_url()?>Faq"><i class="fa fa-question"></i>  <span class="title"> FAQ’s </span><span class="<?php echo $faq_select;?>"></span> </a> </li>
 
                         <li> <a href="<?php echo base_url()?>Dashboard/logout"><i class="clip-exit"></i>  <span class="title"> Logout </span><span class=""></span> </a> </li>
 
