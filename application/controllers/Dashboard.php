@@ -21,11 +21,11 @@ class Dashboard extends CI_Controller {
 		$this->data['title'] = 'Excise, Taxation and Narcotics  - Government of Sindh';
 
 		/*GET BENEFICIARY LIST OF THE LOGGED IN USER*/
-		$user_id = $this->session->userdata('userid');
-		$where = array('user_id' => $user_id , 'ben_status' => '1');
-		$order_by = array('ben_id'=> 'DESC');
-        $ben_info = $this->common_model->get_all_rows('beneficiary' , '*' , $where, array(), $order_by);
-		$this->data['ben_info'] = $ben_info;
+		// $user_id = $this->session->userdata('userid');
+		// $where = array('user_id' => $user_id , 'ben_status' => '1');
+		// $order_by = array('ben_id'=> 'DESC');
+        // $ben_info = $this->common_model->get_all_rows('beneficiary' , '*' , $where, array(), $order_by);
+		// $this->data['ben_info'] = $ben_info;
 
 		$this->load->view('dashboard/includes/header',$this->data);
 		$this->load->view('dashboard/dashboard',$this->data);
