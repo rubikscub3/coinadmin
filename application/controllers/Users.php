@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller {
+class Users extends CI_Controller {
 
 	function __construct() {
         parent::__construct();
@@ -18,7 +18,7 @@ class Dashboard extends CI_Controller {
     }
 
 	public function index(){
-		$this->data['title'] = 'Excise, Taxation and Narcotics  - Government of Sindh';
+		$this->data['title'] = 'CoinXchange';
 
 		/*GET BENEFICIARY LIST OF THE LOGGED IN USER*/
 		// $user_id = $this->session->userdata('userid');
@@ -28,7 +28,37 @@ class Dashboard extends CI_Controller {
 		// $this->data['ben_info'] = $ben_info;
 
 		$this->load->view('dashboard/includes/header',$this->data);
-		$this->load->view('dashboard/dashboard',$this->data);
+		$this->load->view('dashboard/users_list',$this->data);
+		$this->load->view('dashboard/includes/footer',$this->data);
+	}
+	
+	public function accepted_users(){
+		$this->data['title'] = 'CoinXchange';
+
+		/*GET BENEFICIARY LIST OF THE LOGGED IN USER*/
+		// $user_id = $this->session->userdata('userid');
+		// $where = array('user_id' => $user_id , 'ben_status' => '1');
+		// $order_by = array('ben_id'=> 'DESC');
+        // $ben_info = $this->common_model->get_all_rows('beneficiary' , '*' , $where, array(), $order_by);
+		// $this->data['ben_info'] = $ben_info;
+
+		$this->load->view('dashboard/includes/header',$this->data);
+		$this->load->view('dashboard/accepted_users',$this->data);
+		$this->load->view('dashboard/includes/footer',$this->data);
+	}
+	
+	public function rejected_users(){
+		$this->data['title'] = 'CoinXchange';
+
+		/*GET BENEFICIARY LIST OF THE LOGGED IN USER*/
+		// $user_id = $this->session->userdata('userid');
+		// $where = array('user_id' => $user_id , 'ben_status' => '1');
+		// $order_by = array('ben_id'=> 'DESC');
+        // $ben_info = $this->common_model->get_all_rows('beneficiary' , '*' , $where, array(), $order_by);
+		// $this->data['ben_info'] = $ben_info;
+
+		$this->load->view('dashboard/includes/header',$this->data);
+		$this->load->view('dashboard/rejected_users',$this->data);
 		$this->load->view('dashboard/includes/footer',$this->data);
 	}
 	

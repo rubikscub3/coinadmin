@@ -1,6 +1,6 @@
 <!--  footer start -->
 <footer class="footer">
-  <div class="container"> Copyright © 2018 Excise, Taxation and Narcotics Control Department </div>
+  <div class="container"> </div>
 </footer>
 
 <!--  footer end --> 

@@ -7,7 +7,7 @@
     <!--<![endif]-->
     <!-- start: HEAD -->
     <head>
-        <title>Excise, Taxation and Narcotics Control Department</title>
+        <title>CoinXchange</title>
         <!-- start: META -->
         <meta charset="utf-8" />
         <!--[if IE]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
@@ -55,14 +55,9 @@
                     </button>
                     <!-- end: RESPONSIVE MENU TOGGLER -->
                     <!-- start: LOGO -->
-                    <div class="logo"><a class=" navbar-brand" href="<?php echo base_url();?>Dashboard">
-                    <img src="<?php echo base_url();?>assets/admin/images/about-logo2.png"  alt="" class="img-responsive"> </a>
-                    
+                    <div class="logo">
                      <div class="tagLine">
-		    <h1><a href="#">Excise, Taxation and Narcotics Control Department</a></h1>
-		    <h4>Government Of Sindh</h4>
-		
-      
+		    
       </div>
                     
                     </div>
@@ -110,26 +105,14 @@
                     <?php
                         $dashboard = ($this->uri->segment(1) == "Dashboard" && empty($this->uri->segment(2)))?"active open":"";
                         $dashboard_select = ($this->uri->segment(1) == "Dashboard")?"selected":"";
+						$beneficiary="";
+						$beneficiary_list="";
+						$beneficiary_add="";
+                        $users = ($this->uri->segment(1) == "Users")?"active open":"";
+                        $user_approval = ($this->uri->segment(1) == "Users" && $this->uri->segment(2) != "accepted_users" && $this->uri->segment(2) != "rejected_users")?"active open":"";
+                        $user_accept = ($this->uri->segment(2) == "accepted_users")?"active open":"";
+                        $user_reject = ($this->uri->segment(2) == "rejected_users")?"active open":"";
 
-                        $beneficiary = ($this->uri->segment(1) == "Beneficiary")?"active open":"";
-                        $beneficiary_add = ($this->uri->segment(1) == "Beneficiary" && $this->uri->segment(2) != "beneficiary_list" && $this->uri->segment(2) != "vehicle_details")?"active open":"";
-                        $beneficiary_list = ($this->uri->segment(2) == "beneficiary_list")?"active open":"";
-
-                        $history = ($this->uri->segment(1) == "History")?"active open":"";
-                        $history_select = ($this->uri->segment(1) == "History")?"selected":"";
-						
-						$tax_payment = ($this->uri->segment(1) == "Tax")?"active open":"";
-                        $tax_banking = ($this->uri->segment(1) == "Tax" && $this->uri->segment(2) != "tax_online")?"active open":"";
-						
-						$profile = ($this->uri->segment(2) == "profile" || $this->uri->segment(2) == "view_profile")?"active open":"";
-                        $view_profile = ($this->uri->segment(2) == "view_profile")?"active open":"";
-                        $edit_profile = ($this->uri->segment(2) == "profile")?"active open":"";
-
-                        $faq = ($this->uri->segment(1) == "Faq")?"active open":"";
-                        $faq_select = ($this->uri->segment(1) == "Faq")?"selected":"";
-
-                        $about = ($this->uri->segment(1) == "About")?"active open":"";
-                        $about_select = ($this->uri->segment(1) == "About")?"selected":"";
                     ?>
                      <ul class="main-navigation-menu">
                      
@@ -137,24 +120,24 @@
 
                         <li class="<?php echo $dashboard;?>"> <a href="<?php echo base_url()?>Dashboard"><i class="clip-home-3"></i> <span class="title"> Dashboard </span><span class="<?php echo $dashboard_select;?>"></span> </a> </li>
                         
- 						 <li class="<?php echo $beneficiary;?>">
+ 						 <li class="<?php echo $users;?>">
                             <a href="javascript:void(0)"><i class="clip-users-3"></i>
                                 <span class="title"> Users </span><i class="icon-arrow"></i>
                                 <span class="selected"></span>
                             </a>
                             <ul class="sub-menu">
-								<li class="<?php echo $beneficiary_add;?>">
-                                    <a href="<?php echo base_url()?>Beneficiary">
+								<li class="<?php echo $user_approval;?>">
+                                    <a href="<?php echo base_url()?>Users">
                                         <span class="title"> User Approval </span>
                                     </a>
                                 </li>
-                                <li class="<?php echo $beneficiary_add;?>">
-                                    <a href="<?php echo base_url()?>Beneficiary">
+                                <li class="<?php echo $user_accept;?>">
+                                    <a href="<?php echo base_url()?>Users/accepted_users">
                                         <span class="title"> Accept </span>
                                     </a>
                                 </li>
-                                <li class="<?php echo $beneficiary_list;?>">
-                                    <a href="<?php echo base_url()?>Beneficiary/beneficiary_list">
+                                <li class="<?php echo $user_reject;?>">
+                                    <a href="<?php echo base_url()?>Users/rejected_users">
                                         <span class="title"> Decline </span>
                                     </a>
                                 </li>

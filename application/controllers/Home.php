@@ -56,7 +56,7 @@ class Home extends CI_Controller {
             }
         }
 
-		$this->data['title'] = 'Excise, Taxation and Narcotics  - Government of Sindh';
+		$this->data['title'] = 'CoinXchange';
 
 		/*CAPTCHA*/
 		// Load the captcha helper
